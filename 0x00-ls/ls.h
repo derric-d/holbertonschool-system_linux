@@ -1,5 +1,5 @@
-#ifndef
-#define
+#ifndef LS
+#define LS
 
 #include <stdio.h>
 #include <stdlib.h>
