@@ -79,5 +79,31 @@ int main(int argc, char **argv)
 		} else
 			_ls(argv[1], 0, 0, 0);
 	}
+	else if (argc == 3)
+	{
+		if (argv[1][0] != '-')
+		{
+			perror("Incorrect option error");
+			exit(EXIT_FAILURE);
+		}
+		while (*p)
+		{
+			if (*p == '1')
+				ls_1 = 1;
+			else if (*p == 'a')
+			{
+				ls_a = 1;
+			} else if (*p == 'A')
+				ls_A = 1;
+			else
+			{
+				perror("Unknown option error");
+				exit(EXIT_FAILURE);
+			}
+			p++;
+		}
+		_ls(argv[2], ls_a, ls_1, ls_A);
+	}
+
 	return (0);
 }
