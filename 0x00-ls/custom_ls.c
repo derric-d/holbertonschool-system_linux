@@ -79,6 +79,12 @@ int main(int argc, char **argv)
 	return (0);
 }
 
+
+
+/**
+ * parse_curdir - parse dir with 2 args
+ * @argv: arg vector
+ */
 void parse_curdir(char **argv)
 {
 	int ls_a = 0, ls_1 = 0, ls_A = 0;
@@ -103,6 +109,10 @@ void parse_curdir(char **argv)
 	_ls(".", ls_a, ls_1, ls_A);
 }
 
+/**
+ * parse_flagdir - arg with options
+ * @argv: argvector
+ */
 void parse_flagdir(char **argv)
 {
 	int ls_a = 0, ls_1 = 0, ls_A = 0;
