@@ -72,7 +72,7 @@ void race_state(int *id, size_t size)
 		insert_node(&head, id[i]);
 	}
 
-	printf("Race State:\n");
+	printf("Race state:\n");
 	for (temp = head; temp; temp = temp->next)
 	{
 		printf("Car %d [%lu laps]\n", temp->id, temp->laps);
