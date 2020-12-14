@@ -14,7 +14,8 @@ void insert_node(Car_l **head, int id)
 		new_c = malloc(sizeof(Car_l));
 
 		if (!new_c)
-			exit(EXIT_FAILURE);
+			/*cant use exit?*/
+			fprintf(stderr, "malloc fail\n");
 
 		new_c->id = id;
 		new_c->laps = 0;
@@ -32,7 +33,8 @@ void insert_node(Car_l **head, int id)
 	}
 	end = malloc(sizeof(Car_l));
 	if (!end)
-		exit(EXIT_FAILURE);
+		/*cant use exit*/
+		fprintf(stderr, "malloc fail\n");
 
 	end->id = id;
 	end->laps = 0;
