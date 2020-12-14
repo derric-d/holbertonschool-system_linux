@@ -56,7 +56,7 @@ void race_state(int *id, size_t size)
 	i = 0;
 	temp = head;
 
-	if (size == 0)
+	if (size == NULL)
 	{
 		while (head)
 		{
