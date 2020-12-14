@@ -54,6 +54,17 @@ void race_state(int *id, size_t size)
 	i = 0;
 	temp = head;
 
+	if (size == 0)
+	{
+		while (head)
+		{
+			temp = head;
+			head = head->next;
+			free(temp);
+		}
+		return;
+	}
+
 	while (i < size)
 	{
 		insert_node(&head, id[i]);
